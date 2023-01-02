@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Drop Player
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+
+        <form action="/trade" method="post">
+
+            <h3>Players to Trade Away</h3>
+
+            <div class="mb-3" style="padding-top:65px;">
+                    <div class="mb-1">
+                        <select class="form-select mx-auto w-auto" name="player1">
+                            <option disabled="" selected="">Player</option>
+                            
+                            {% for player in team %}
+                                <option value="{{ player.name }}">{{ player.name }}</option>
+                            {% endfor %} 
+        
+                        </select>
+                    </div>
+            </div>
+
+            <div class="mb-3">
+                    <div class="mb-1">
+                        <select class="form-select mx-auto w-auto" name="player2">
+                            <option disabled="" selected="">Player</option>
+                            
+                            {% for player in team %}
+                                <option value="{{ player.name }}">{{ player.name }}</option>
+                            {% endfor %} 
+        
+                        </select>
+                    </div>
+            </div>
+
+            <div class="mb-3">
+                    <div class="mb-1">
+                        <select class="form-select mx-auto w-auto" name="player3">
+                            <option disabled="" selected="">Player</option>
+                            
+                            {% for player in team %}
+                                <option value="{{ player.name }}">{{ player.name }}</option>
+                            {% endfor %} 
+        
+                        </select>
+                    </div>
+            </div>
+
+        </div>
+        <div class="col">
+            
+            
+            <h3>Players to Trade For</h3>
+
+            <p>Format player names as seen in CBS data (First initial, period, space, last name. For example, "T. Brady")</p>
+
+
+            <div class="mb-3">
+                    <div class="mb-1">
+                        <input autocomplete="off" autofocus="" class="form-control mx-auto w-auto" name="player4" placeholder="Type Player Name" type="text">
+                    </div>
+            </div>
+
+            <div class="mb-3">
+                    <div class="mb-1">
+                        <input autocomplete="off" autofocus="" class="form-control mx-auto w-auto" name="player5" placeholder="Type Player Name" type="text">
+                    </div>
+            </div>
+
+            <div class="mb-3">
+                    <div class="mb-1">
+                        <input autocomplete="off" autofocus="" class="form-control mx-auto w-auto" name="player6" placeholder="Type Player Name" type="text">
+                    </div>
+            </div>
+
+        </div>
+
+        <div>
+            <button class="btn btn-primary" type="submit">Evaluate Trade</button>
+        </div>
+    </form>
+
+
+    </div>
+</div>
+
+{% endblock %}

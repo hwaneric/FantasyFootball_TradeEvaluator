@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Drop Player
+{% endblock %}
+
+{% block main %}
+
+
+    <div>
+        <h1>Drop Player from Team</h1>
+        <form action="/drop" method="post">
+            <div class="mb-3">
+                <select class="form-select mx-auto w-auto" name="player">
+                    <option disabled="" selected="">Player</option>
+                    
+                    {% for player in team %}
+                        <option value="{{ player.id }}">{{ player.name }}</option>
+                    {% endfor %} 
+
+                </select>
+            </div>
+            <button class="btn btn-primary" type="submit">Drop Player</button>
+        </form>
+    </div>
+{% endblock %}

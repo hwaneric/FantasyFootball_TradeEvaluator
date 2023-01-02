@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Player
+{% endblock %}
+
+{% block main %}
+
+
+    <div>
+        
+        <h1>Add Player to Team</h1>
+
+        <div>
+            <p>Format player names as seen in CBS data (First initial, period, space, last name. For example, "T. Brady")</p>
+       </div>
+        <form action="/add" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus="" class="form-control mx-auto w-auto" name="player" placeholder="Type Player Name" type="text">
+            </div>
+            <button class="btn btn-primary" type="submit">Add Player</button>
+        </form>
+        
+    </div>
+{% endblock %}
