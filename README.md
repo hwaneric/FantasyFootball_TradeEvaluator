@@ -13,8 +13,9 @@ This web app allows users register and log in with an account and then build a f
 This project—created in 2021—was my first ever major coding project, and it was completed as my final project for when I took Harvard's CS50. Please excuse any messy and less-than-optimal code on my first major project!
 
 
-### Installing
+## Usage
 
+### Installing and Running the Webapp
 1. Clone the repository.
 ```bash
 git clone git@github.com:hwaneric/FantasyFootball_TradeEvaluator.git FantasyFootballTradeEvaluator
